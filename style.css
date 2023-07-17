@@ -38,6 +38,10 @@ body{
     overflow: hidden;
     padding: 40px;
 }
+
+.resultado  {
+    display : none;
+}
 input {
 	width: 70%;
     padding: 12px 15px;

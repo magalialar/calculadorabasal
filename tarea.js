@@ -126,7 +126,14 @@ console.log(IsPar(8))
 
 
 //Escribe una función que tome un array de números como argumento y devuelva la suma de sus elementos.
-
+function sumarArray(numeros) {
+    let suma = 0;
+    for (let i = 0; i < numeros.length; i++) {
+        suma += numeros[i];
+    }
+    return suma;
+}
+console.log("La suma del array es:" + sumarArray([1,2,3,4,5,6]))
 //Escribe una función que tome un array de strings como argumento y devuelva la longitud del string más largo.
 
 let miArray = [
@@ -140,32 +147,67 @@ for (let i = 0; i<tamaño; i ++) {
 }
 
 //Escribe una función que tome un objeto como argumento y devuelva un array con los valores de todas sus propiedades.
-
-
-
-
+const persona = {
+    nombre: "Magali",
+    edad: 20,
+    ciudad: "Fram"
+};
+function obtenerValores(objeto){
+    return Object.values(objeto);
+}
+console.log(obtenerValores(persona));
 
 //Vectores
 
 //Escribe una función que tome un array de números como argumento y devuelva el número más grande.
+function encontarNumeroMasGrande (array) {
+let max = array [0];
+for (let i = 1; i < array.length; i++) {
+    if (array[i] > max) {
+        max = array[i];
+    }
+}  
+return max;
+}
+console.log(encontarNumeroMasGrande([1,2,3,4,5,6]));
 
 //Escribe una función que tome un array de números como argumento y devuelva un array con los números ordenados de menor a mayor.
-
+function ordenarNumeros(array) {
+    return array.sort((a,b)=> a - b);
+}
+console.log(ordenarNumeros([5,2,8,1,4]));
 //Escribe una función que tome dos arrays como argumentos y devuelva un array que contenga los elementos comunes entre ambos.
-
+function encontrarElementosComunes(array1,array2) {
+    return array1.filter(value => array2.includes(value));
+}
+console.log(encontrarElementosComunes([1,2,3,4,5],[4,5,6,7]));
 //Escribe una función que tome un array de strings como argumento y devuelva un nuevo array que contenga los strings convertidos a mayúsculas.
-
+function convertiraAMayusculas(array){
+    return array.map(string => string.toUpperCase());
+}
+console.log(convertiraAMayusculas(["hola","mundo"]));
 //Escribe una función que tome un array de números como argumento y devuelva un nuevo array que contenga la suma acumulativa de sus elementos.
-
-
+function sumaAcumulativa(array) {
+    let sum = 0;
+    return array.map(num => sum += num);
+}
+console.log(sumaAcumulativa([1,2,3,4,5]));
 
 
 //Bucles
 
 //Escribe un bucle for que imprima en la consola los números del 1 al 10.
-
+for (let i = 0; i < 10; i++) {
+    console.log(i)
+}
+console.log("termino")
 
 //Escribe un bucle while que imprima en la consola los números del 1 al 5.
+let i = 1;
+while( i < 5) {
+ console.log(i)
+ i++
+}
 
 //Crea un vector con los números del 1 al 5. Escribe un bucle for que imprima en la consola cada uno de los elementos del vector.
 
